@@ -48,6 +48,7 @@ const textContentH2 = document.querySelectorAll('.text-content h2');
 textContentH2.forEach((element) => {
     element.addEventListener('mousedown', () => {
         element.style.color = 'red';
+        TweenLite.to(element, 2, {fontSize: '5rem'});
     });
 });
 
@@ -100,4 +101,5 @@ const bodySection = document.querySelector('body');
 noContext.addEventListener('contextmenu', (event) => {
     event.preventDefault();
     bodySection.style.backgroundColor = 'red';
+    TweenLite.to(noContext, 2, {opacity:0, rotation:360});
 });
